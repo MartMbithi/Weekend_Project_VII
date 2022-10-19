@@ -1,119 +1,49 @@
 <?php
-/*
- *   Crafted On Mon Sep 26 2022
- *
- * 
- *   www.devlan.co.ke
- *   hello@devlan.co.ke
- *
- *
- *   The Devlan Solutions LTD End User License Agreement
- *   Copyright (c) 2022 Devlan Solutions LTD
- *
- *
- *   1. GRANT OF LICENSE 
- *   Devlan Solutions LTD hereby grants to you (an individual) the revocable, personal, non-exclusive, and nontransferable right to
- *   install and activate this system on two separated computers solely for your personal and non-commercial use,
- *   unless you have purchased a commercial license from Devlan Solutions LTD. Sharing this Software with other individuals, 
- *   or allowing other individuals to view the contents of this Software, is in violation of this license.
- *   You may not make the Software available on a network, or in any way provide the Software to multiple users
- *   unless you have first purchased at least a multi-user license from Devlan Solutions LTD.
- *
- *   2. COPYRIGHT 
- *   The Software is owned by Devlan Solutions LTD and protected by copyright law and international copyright treaties. 
- *   You may not remove or conceal any proprietary notices, labels or marks from the Software.
- *
- *
- *   3. RESTRICTIONS ON USE
- *   You may not, and you may not permit others to
- *   (a) reverse engineer, decompile, decode, decrypt, disassemble, or in any way derive source code from, the Software;
- *   (b) modify, distribute, or create derivative works of the Software;
- *   (c) copy (other than one back-up copy), distribute, publicly display, transmit, sell, rent, lease or 
- *   otherwise exploit the Software. 
- *
- *
- *   4. TERM
- *   This License is effective until terminated. 
- *   You may terminate it at any time by destroying the Software, together with all copies thereof.
- *   This License will also terminate if you fail to comply with any term or condition of this Agreement.
- *   Upon such termination, you agree to destroy the Software, together with all copies thereof.
- *
- *
- *   5. NO OTHER WARRANTIES. 
- *   DEVLAN SOLUTIONS LTD  DOES NOT WARRANT THAT THE SOFTWARE IS ERROR FREE. 
- *   DEVLAN SOLUTIONS LTD SOFTWARE DISCLAIMS ALL OTHER WARRANTIES WITH RESPECT TO THE SOFTWARE, 
- *   EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, 
- *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. 
- *   SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS
- *   ON HOW LONG AN IMPLIED WARRANTY MAY LAST, OR THE EXCLUSION OR LIMITATION OF 
- *   INCIDENTAL OR CONSEQUENTIAL DAMAGES,
- *   SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. 
- *   THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS AND YOU MAY ALSO 
- *   HAVE OTHER RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION.
- *
- *
- *   6. SEVERABILITY
- *   In the event of invalidity of any provision of this license, the parties agree that such invalidity shall not
- *   affect the validity of the remaining portions of this license.
- *
- *
- *   7. NO LIABILITY FOR CONSEQUENTIAL DAMAGES IN NO EVENT SHALL DEVLAN SOLUTIONS LTD OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY
- *   CONSEQUENTIAL, SPECIAL, INCIDENTAL OR INDIRECT DAMAGES OF ANY KIND ARISING OUT OF THE DELIVERY, PERFORMANCE OR 
- *   USE OF THE SOFTWARE, EVEN IF DEVLAN SOLUTIONS LTD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES
- *   IN NO EVENT WILL DEVLAN SOLUTIONS LTD  LIABILITY FOR ANY CLAIM, WHETHER IN CONTRACT 
- *   TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED THE LICENSE FEE PAID BY YOU, IF ANY.
- *
- */
 session_start();
 require_once('../config/config.php');
-/* Load Authentication Logic Helper */
 require_once('../helpers/authentication.php');
 require_once('../partials/head.php');
 ?>
 
-<body class="hold-transition login-page" style="background-image: url('../public/img/bg.jpg'); background-size: cover; ">
-    <div class="login-box">
-        <div class="login-logo">
-            <a href=""><b>i</b>Pet</a>
-        </div>
-        <!-- /.login-logo -->
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Reset password - Enter new password and confirm it</p>
-
-                <form method="post">
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" required name="new_password" placeholder="New Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+<body class="bg-gray-200">
+    <main class="main-content  mt-0">
+        <div class="page-header align-items-start min-vh-100">
+            <span class="mask bg-gradient-dark opacity-6"></span>
+            <div class="container my-auto">
+                <div class="row">
+                    <div class="col-lg-4 col-md-8 col-12 mx-auto">
+                        <div class="card z-index-0 fadeIn3 fadeInBottom">
+                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                    <h5 class="text-white font-weight-bolder text-center mt-2 mb-0">
+                                        Apartment Visitors Management System
+                                        <hr>
+                                        Confirm Password
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form role="form" method="POST" class="text-start">
+                                    <div class="input-group input-group-outline my-3">
+                                        <label class="form-label">New Password</label>
+                                        <input type="password" required name="new_password" class="form-control">
+                                    </div>
+                                    <div class="input-group input-group-outline my-3">
+                                        <label class="form-label">Confirm Password</label>
+                                        <input type="password" required name="confirm_password" class="form-control">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" name="Reset_Password_Step_2" class="btn bg-gradient-primary w-100 my-4 mb-2">Reset</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" required name="confirm_password" placeholder="Confirm Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
-                            <!-- Leave This Blank For Now -->
-                        </div>
-                        <div class="col-4">
-                            <button type="submit" name="Reset_Password_Step_2" class="btn btn-primary btn-block">Confirm</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
+                </div>
             </div>
-            <!-- /.login-card-body -->
         </div>
-    </div>
-    <!-- /.login-box -->
-
+    </main>
     <?php require_once('../partials/scripts.php'); ?>
-
 </body>
+
+</html>
