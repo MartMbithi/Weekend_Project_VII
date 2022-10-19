@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once('../config/config.php');
+require_once('../helpers/authentication.php');
 require_once('../partials/head.php');
 ?>
 
