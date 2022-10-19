@@ -20,4 +20,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../public/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <!-- Toastr -->
+    <link rel="stylesheet" href="../public/js/plugins/toastr/toastr.min.css">
+    <?php
+    /* Alert Sesion Via Alerts */
+    if (isset($_SESSION['success'])) {
+        $success = $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    ?>
 </head>

@@ -23,7 +23,7 @@ require_once('../partials/head.php');
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form role="form" method="POST" class="text-start">
+                                <form  method="POST" class="text-star">
                                     <div class="input-group input-group-outline my-3">
                                         <label class="form-label">Email</label>
                                         <input type="email" required name="admin_email" class="form-control">
