@@ -137,7 +137,25 @@ require_once('../partials/head.php');
                                                             </div>
                                                         </div>
                                                         <div class="modal-body">
-
+                                                            <form method="post" enctype="multipart/form-data" role="form">
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Full Names</label>
+                                                                    <input type="hidden" required name="admin_id" value="<?php echo $admin->admin_id; ?>" class="form-control">
+                                                                    <input type="text" required name="admin_name" value="<?php echo $admin->admin_name; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Email Address</label>
+                                                                    <input type="email" required name="admin_email" value="<?php echo $admin->admin_email; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Phone Number</label>
+                                                                    <input type="text" required name="admin_phone_number" value="<?php echo $admin->admin_phone_number; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="text-center btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit" name="Update_Admin" class="btn btn-success">Update Admin</button>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
