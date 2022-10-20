@@ -23,6 +23,7 @@ if (isset($_POST['Add_Visitor'])) {
 /* Update Visitor */
 if (isset($_POST['Update_Visitor'])) {
     $visitor_id = mysqli_real_escape_string($mysqli, $_POST['visitor_id']);
+    $visitor_names = mysqli_real_escape_string($mysqli, $_POST['visitor_names']);
     $visitor_id_number = mysqli_real_escape_string($mysqli, $_POST['visitor_id_number']);
     $visitor_email = mysqli_real_escape_string($mysqli, $_POST['visitor_email']);
     $visitor_phone_number = mysqli_real_escape_string($mysqli, $_POST['visitor_phone_number']);
@@ -55,9 +56,9 @@ if (isset($_POST['Delete_Visitor'])) {
 
     /* Delete */
     $sql = "DELETE FROM visitor WHERE visitor_id = '{$visitor_id}'";
-    
+
     if (mysqli_query($mysqli, $sql)) {
-        $success = "Visitor delete";
+        $success = "Visitor deleted";
     } else {
         $err = "Failed, please try again";
     }

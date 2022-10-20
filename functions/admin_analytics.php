@@ -11,7 +11,7 @@ $stmt->fetch();
 $stmt->close();
 
 /* Total Number Of Visitors */
-$query = "SELECT COUNT(*)  FROM visitor WHERE visitor_check_in_date_time = '{$start_today}' AND visitor_check_out_date_time = '{$start_today}' ";
+$query = "SELECT COUNT(*)  FROM visitor WHERE visitor_check_in_date_time = '{$start_today}' ";
 $stmt = $mysqli->prepare($query);
 $stmt->execute();
 $stmt->bind_result($visitors_visited_today);
