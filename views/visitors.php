@@ -25,9 +25,9 @@ require_once('../partials/head.php');
                     </div>
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
-                            <a href="logout" class="nav-link text-body font-weight-bold px-0">
+                            <a href="profile" class="nav-link text-body font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
-                                <span class="d-sm-inline d-none">Log Out</span>
+                                <span class="d-sm-inline d-none">Profile</span>
                             </a>
                         </li>
                     </ul>
@@ -43,15 +43,21 @@ require_once('../partials/head.php');
                 </div>
             </div>
         </nav> <!-- End Navbar -->
+
         <div class="container-fluid py-4">
             <div class="row mt-4">
+                <div class="text-center">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Add Visitor Details</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To PDF</button>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To Excel</button>
+                </div>
             </div>
             <div class="row mb-4">
                 <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
                     <div class="card">
                         <div class="card-header pb-0">
                             <div class="row">
-                                <div class="col-lg-6 col-7">
+                                <div class="col-lg-12 col-12">
                                     <h6>Recent Visitors Data Recorded</h6>
                                 </div>
                             </div>
