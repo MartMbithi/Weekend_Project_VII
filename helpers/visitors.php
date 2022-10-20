@@ -50,3 +50,15 @@ if (isset($_POST['Update_Visitor'])) {
 }
 
 /* Delete Visitor */
+if (isset($_POST['Delete_Visitor'])) {
+    $visitor_id = mysqli_real_escape_string($mysqli, $_POST['visitor_id']);
+
+    /* Delete */
+    $sql = "DELETE FROM visitor WHERE visitor_id = '{$visitor_id}'";
+    
+    if (mysqli_query($mysqli, $sql)) {
+        $success = "Visitor delete";
+    } else {
+        $err = "Failed, please try again";
+    }
+}
