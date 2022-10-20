@@ -110,7 +110,28 @@ require_once('../partials/head.php');
                                                 </div>
                                             </div>
                                             <!-- End Modal -->
-                                        <?php } ?>
+
+                                            <!-- Delete Modal -->
+                                            <div class="modal fade" id="delete_<?php echo $visitors->visitor_id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">CONFIRM DELETE</h5>
+                                                        </div>
+                                                        <form method="POST">
+                                                            <div class="modal-body text-center text-danger">
+                                                                <h4>Delete <?php echo $visitors->visitor_names; ?> Details?</h4>
+                                                                <br>
+                                                                <!-- Hide This -->
+                                                                <input type="hidden" name="visitor_id" value="<?php echo $visitors->visitor_id; ?>">
+                                                                <button type="button" class="text-center btn btn-success" data-bs-dismiss="modal">No</button>
+                                                                <input type="submit" name="Delete_Visitor" value="Delete" class="text-center btn btn-danger">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!-- End Modal -->
+                                            <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
