@@ -52,6 +52,55 @@ require_once('../partials/head.php');
                     <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To Excel</button>
                 </div>
             </div>
+            <!-- Add Visitor Modal -->
+            <div class="modal fade fixed-right" id="add_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog  modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header align-items-center">
+                            <div class="text-bold">
+                                <h6 class="text-bold">Register New Visitor</h6>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" enctype="multipart/form-data" role="form">
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Full Names</label>
+                                    <input type="text" required name="visitor_names" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">National ID / Passport Number</label>
+                                    <input type="text" required name="visitor_id_number" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" required name="visitor_email" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="text" required name="visitor_phone_number" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Check In Date & Time</label>
+                                    <input type="date" required name="visitor_check_in_date_time" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Check Out Date & Time</label>
+                                    <input type="date" required name="visitor_check_out_date_time" class="form-control">
+                                </div>
+                                <div class="input-group input-group-outline my-3">
+                                    <label class="form-label">Where Visiting</label>
+                                    <input type="text" required name="visitor_where_visiting" class="form-control">
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="text-center btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" name="Add_Visitor" class="btn btn-success">Add Visitor</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal -->
             <div class="row mb-4">
                 <div class="col-lg-12 col-md-12 mb-md-0 mb-4">
                     <div class="card">
