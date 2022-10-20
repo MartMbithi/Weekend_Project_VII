@@ -2,7 +2,7 @@
 session_start();
 require_once('../config/config.php');
 require_once('../config/checklogin.php');
-require_once('../functions/admin_analytics.php');
+require_once('../helpers/visitors.php');
 require_once('../partials/head.php');
 ?>
 
@@ -159,7 +159,41 @@ require_once('../partials/head.php');
                                                             </div>
                                                         </div>
                                                         <div class="modal-body">
-
+                                                            <form method="post" enctype="multipart/form-data" role="form">
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Full Names</label>
+                                                                    <input type="hidden" required name="visitor_id" value="<?php echo $visitors->visitor_id; ?>" class="form-control">
+                                                                    <input type="text" required name="visitor_names" value="<?php echo $visitors->visitor_names; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">National ID / Passport Number</label>
+                                                                    <input type="text" required name="visitor_id_number" value="<?php echo $visitors->visitor_id_number; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Email Address</label>
+                                                                    <input type="email" required name="visitor_email" value="<?php echo $visitors->visitor_email; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Phone Number</label>
+                                                                    <input type="text" required name="visitor_phone_number" value="<?php echo $visitors->visitor_phone_number; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Check In Date & Time</label>
+                                                                    <input type="text" required name="visitor_check_in_date_time" value="<?php echo $visitors->visitor_check_in_date_time; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Check Out Date & Time</label>
+                                                                    <input type="text" required name="visitor_check_out_date_time" value="<?php echo $visitors->visitor_check_out_date_time; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="input-group input-group-outline my-3">
+                                                                    <label class="form-label">Where Visiting</label>
+                                                                    <input type="text" required name="visitor_where_visiting" value="<?php echo $visitors->visitor_where_visiting; ?>" class="form-control">
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="text-center btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit" name="Update_Visitor" class="btn btn-success">Update Visitor</button>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
