@@ -90,10 +90,26 @@ require_once('../partials/head.php');
                                                 </td>
                                                 <td><?php echo $visitors->visitor_where_visiting; ?></td>
                                                 <td>
-                                                    <a data-toggle="modal" href="#update_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-primary"> Edit</a>
-                                                    <a data-toggle="modal" href="#delete_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-danger"> Delete</a>
+                                                    <a data-bs-toggle="modal" href="#update_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-primary"> Edit</a>
+                                                    <a data-bs-toggle="modal" href="#delete_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-danger"> Delete</a>
                                                 </td>
                                             </tr>
+                                            <!-- Update Modal -->
+                                            <div class="modal fade fixed-right" id="update_<?php echo $visitors->visitor_id; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                                                <div class="modal-dialog  modal-xl" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header align-items-center">
+                                                            <div class="text-bold">
+                                                                <h6 class="text-bold">Update <?php echo $visitors->visitor_names; ?> Details</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-body">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Modal -->
                                         <?php } ?>
                                     </tbody>
                                 </table>
