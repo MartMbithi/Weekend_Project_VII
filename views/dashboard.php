@@ -110,10 +110,8 @@ require_once('../partials/head.php');
                                         <tr>
                                             <th>Names</th>
                                             <th>ID Number</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Check In </th>
-                                            <th>Check Out</th>
+                                            <th>Contacts</th>
+                                            <th>Dates</th>
                                             <th>Where Visited</th>
                                         </tr>
                                     </thead>
@@ -128,10 +126,14 @@ require_once('../partials/head.php');
                                             <tr>
                                                 <td><?php echo $visitors->visitor_names; ?></td>
                                                 <td><?php echo $visitors->visitor_id_number; ?></td>
-                                                <td><?php echo $visitors->visitor_phone_number; ?></td>
-                                                <td><?php echo $visitors->visitor_email; ?></td>
-                                                <td><?php echo $visitors->visitor_check_in_date_time; ?></td>
-                                                <td><?php echo $visitors->visitor_check_out_date_time; ?></td>
+                                                <td>
+                                                    Phone: <?php echo $visitors->visitor_phone_number; ?><br>
+                                                    Email: <?php echo $visitors->visitor_email; ?>
+                                                </td>
+                                                <td>
+                                                    Check In: <?php echo $visitors->visitor_check_in_date_time; ?><br>
+                                                    Check Out: <?php echo $visitors->visitor_check_out_date_time; ?>
+                                                </td>
                                                 <td><?php echo $visitors->visitor_where_visiting; ?></td>
                                             </tr>
                                         <?php } ?>
