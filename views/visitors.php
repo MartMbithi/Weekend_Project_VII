@@ -16,9 +16,9 @@ require_once('../partials/head.php');
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Home</a></li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Visitors</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Administrator Dashboard</h6>
+                    <h6 class="font-weight-bolder mb-0">Visitors</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -44,53 +44,6 @@ require_once('../partials/head.php');
             </div>
         </nav> <!-- End Navbar -->
         <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">weekend</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Today's Visitors</p>
-                                <h4 class="mb-0"><?php echo $visitors_visited_today; ?></h4>
-                            </div>
-                        </div>
-                        <div class="card-footer p-3">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Administrators</p>
-                                <h4 class="mb-0"><?php echo $administrator; ?></h4>
-                            </div>
-                        </div>
-                        <div class="card-footer p-3">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Total Visitors</p>
-                                <h4 class="mb-0"><?php echo $visitors; ?></h4>
-                            </div>
-                        </div>
-                        <div class="card-footer p-3">
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row mt-4">
             </div>
             <div class="row mb-4">
@@ -110,11 +63,10 @@ require_once('../partials/head.php');
                                         <tr>
                                             <th>Names</th>
                                             <th>ID Number</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Check In </th>
-                                            <th>Check Out</th>
+                                            <th>Contacts</th>
+                                            <th>Dates </th>
                                             <th>Where Visited</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -128,11 +80,19 @@ require_once('../partials/head.php');
                                             <tr>
                                                 <td><?php echo $visitors->visitor_names; ?></td>
                                                 <td><?php echo $visitors->visitor_id_number; ?></td>
-                                                <td><?php echo $visitors->visitor_phone_number; ?></td>
-                                                <td><?php echo $visitors->visitor_email; ?></td>
-                                                <td><?php echo $visitors->visitor_check_in_date_time; ?></td>
-                                                <td><?php echo $visitors->visitor_check_out_date_time; ?></td>
+                                                <td>
+                                                    <b>Phone:</b> <?php echo $visitors->visitor_phone_number; ?><br>
+                                                    <b>Email:</b> <?php echo $visitors->visitor_email; ?>
+                                                </td>
+                                                <td>
+                                                    <b>Check In: </b> <?php echo $visitors->visitor_check_in_date_time; ?><br>
+                                                    <b>Check Out:</b> <?php echo $visitors->visitor_check_out_date_time; ?>
+                                                </td>
                                                 <td><?php echo $visitors->visitor_where_visiting; ?></td>
+                                                <td>
+                                                    <a data-toggle="modal" href="#update_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-primary"> Edit</a>
+                                                    <a data-toggle="modal" href="#delete_<?php echo $visitors->visitor_id; ?>" class="badge btn-sm btn-danger"> Delete</a>
+                                                </td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>
