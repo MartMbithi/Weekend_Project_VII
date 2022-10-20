@@ -34,6 +34,7 @@ if ($query->num_rows > 0) {
             $row['visitor_email'],
             $row['visitor_check_in_date_time'],
             $row['visitor_check_out_date_time'],
+            $row['visitor_where_visiting']
         );
         array_walk($lineData, 'filterData');
         $excelData .= implode("\t", array_values($lineData)) . "\n";
