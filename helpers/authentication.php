@@ -3,7 +3,7 @@
 /* Login */
 if (isset($_POST['Login'])) {
     $admin_email = mysqli_real_escape_string($mysqli, $_POST['admin_email']);
-    $admin_password = md5(mysqli_real_escape_string($mysqli, $_POST['admin_password']));
+    $admin_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['admin_password'])));
 
     /* Process Login */
     $stmt = $mysqli->prepare("SELECT admin_email, admin_password, admin_id FROM administrator 
@@ -40,7 +40,7 @@ if (isset($_POST['Reset_Password_Step_1'])) {
         header('Location: confirm_password');
         exit;
     } else {
-        $err = "Email Does Not Exist";
+        $err = "Email does not exist";
     }
 }
 
@@ -58,11 +58,11 @@ if (isset($_POST['Reset_Password_Step_2'])) {
 
         if (mysqli_query($mysqli, $sql)) {
             /* Pass This Alert Via Session */
-            $_SESSION['success'] = 'Your Password Has Been Reset Proceed To Login';
-            header('Location: login');
+            $_SESSION['success'] = 'Your password has been reset proceed to login';
+            header('Location: ../');
             exit;
         } else {
-            $err = "Failed!, Please Try Again";
+            $err = "Failed!, please try again";
         }
     }
 }
