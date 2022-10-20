@@ -2,8 +2,6 @@
 session_start();
 require_once '../config/config.php';
 require_once '../config/checklogin.php';
-require_once '../config/codeGen.php';
-check_login();
 require_once('../vendor/autoload.php');
 
 use Dompdf\Dompdf;
@@ -109,12 +107,11 @@ $html =
                             <table border="1" cellspacing="0" width="98%" style="font-size:9pt">
                                 <thead>
                                     <tr>
-                                        <th style="width:100%">Item Details</th>
-                                        <th style="width:30%">Qty</th>
-                                        <th style="width:100%">Sold By</th>
-                                        <th style="width:100%">Sold To</th>
-                                        <th style="width:100%">Date Sold</th>
-                                        <th style="width:100%">Amount</th>
+                                        <th style="width:100%">Full Names</th>
+                                        <th style="width:100%">ID / Passport Number</th>
+                                        <th style="width:100%">Contacts</th>
+                                        <th style="width:100%">Dates</th>
+                                        <th style="width:100%">Place Visited</th>
                                     </tr>
                                 </thead>
                                 <tbody>
