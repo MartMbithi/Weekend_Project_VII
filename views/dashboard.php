@@ -73,8 +73,40 @@ require_once('../partials/head.php');
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body px-0 pb-2">
+                        <div class="card-body">
                             <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Names</th>
+                                            <th>ID Number</th>
+                                            <th>Phone Number</th>
+                                            <th>Email</th>
+                                            <th>Check In </th>
+                                            <th>Check Out</th>
+                                            <th>Where Visited</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $ret = "SELECT * FROM visitor";
+                                        $stmt = $mysqli->prepare($ret);
+                                        $stmt->execute(); //ok
+                                        $res = $stmt->get_result();
+                                        while ($visitors = $res->fetch_object()) {
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $visitors->visitor_names; ?></td>
+                                                <td><?php echo $visitors->visitor_id_number; ?></td>
+                                                <td><?php echo $visitors->visitor_phone_number; ?></td>
+                                                <td><?php echo $visitors->visitor_email; ?></td>
+                                                <td><?php echo $visitors->visitor_check_in_date_time; ?></td>
+                                                <td><?php echo $visitors->visitor_check_out_date_time; ?></td>
+                                                <td><?php echo $visitors->visitor_where_visiting; ?></td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

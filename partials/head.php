@@ -20,6 +20,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../public/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css" />
     <!-- Toastr -->
     <link rel="stylesheet" href="../public/js/plugins/toastr/toastr.min.css">
     <?php
