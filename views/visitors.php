@@ -48,8 +48,8 @@ require_once('../partials/head.php');
             <div class="row mt-4">
                 <div class="text-center">
                     <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Add Visitor Details</button>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To PDF</button>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To Excel</button>
+                    <a href="export_pdf_visitors" class="btn btn-primary"> Export Visitor Details To PDF</a>
+                    <a href="export_xls_visitors" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To Excel</a>
                 </div>
             </div>
             <!-- Add Visitor Modal -->
