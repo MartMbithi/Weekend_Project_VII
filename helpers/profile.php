@@ -1,7 +1,7 @@
 <?php
 /* Update Admin */
 if (isset($_POST['Update_My_Account'])) {
-    $admin_id = mysqli_real_escape_string($mysqli, $_POST['admin_id']);
+    $admin_id = mysqli_real_escape_string($mysqli, $_SESSION['admin_id']);
     $admin_name = mysqli_real_escape_string($mysqli, $_POST['admin_name']);
     $admin_phone_number = mysqli_real_escape_string($mysqli, $_POST['admin_phone_number']);
     $admin_email = mysqli_real_escape_string($mysqli, $_POST['admin_email']);
@@ -19,8 +19,8 @@ if (isset($_POST['Update_My_Account'])) {
 
 
 /* Change Password  */
-if (isset($_POST['Updaate_Passwords'])) {
-    $admin_id = mysqli_real_escape_string($mysqli, $_POST['admin_id']);
+if (isset($_POST['Update_Passwords'])) {
+    $admin_id = mysqli_real_escape_string($mysqli, $_SESSION['admin_id']);
     $new_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['new_password'])));
     $confirm_password = sha1(md5(mysqli_real_escape_string($mysqli, $_POST['confirm_password'])));
 
