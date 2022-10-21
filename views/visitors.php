@@ -47,9 +47,15 @@ require_once('../partials/head.php');
         <div class="container-fluid py-4">
             <div class="row mt-4">
                 <div class="text-center">
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary"> Add Visitor Details</button>
-                    <a href="export_pdf_visitors" class="btn btn-primary"> Export Visitor Details To PDF</a>
-                    <a href="export_xls_visitors" data-bs-target="#add_modal" class="btn btn-primary"> Export Visitor Details To Excel</a>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#add_modal" class="btn btn-primary">
+                        <i class="material-icons opacity-10">person_add</i> Add Visitor Details
+                    </button>
+                    <a href="export_pdf_visitors" class="btn btn-primary">
+                        <i class="material-icons opacity-10">picture_as_pdf</i> Export Visitor Details To PDF
+                    </a>
+                    <a href="export_xls_visitors" data-bs-target="#add_modal" class="btn btn-primary">
+                        <i class="material-icons opacity-10">grid_on</i> Export Visitor Details To Excel
+                    </a>
                 </div>
             </div>
             <!-- Add Visitor Modal -->
