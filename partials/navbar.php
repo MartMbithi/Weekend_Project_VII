@@ -19,7 +19,8 @@
             <li class="nav-item">
                 <a class="nav-link text-white " href="visitors">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">table_view</i>
+                        <i class="material-icons opacity-10">group</i>
+
                     </div>
                     <span class="nav-link-text ms-1">Visitors</span>
                 </a>
@@ -27,7 +28,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white " href="administrators">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">receipt_long</i>
+                        <i class="material-icons opacity-10">manage_accounts</i>
                     </div>
                     <span class="nav-link-text ms-1">Administrators</span>
                 </a>
@@ -35,7 +36,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white " href="logout">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">view_in_ar</i>
+                        <i class="material-icons opacity-10">lock</i>
                     </div>
                     <span class="nav-link-text ms-1">Log Out</span>
                 </a>
