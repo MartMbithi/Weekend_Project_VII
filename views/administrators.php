@@ -129,8 +129,12 @@ require_once('../partials/head.php');
                                                 <td><?php echo $admin->admin_phone_number; ?></td>
                                                 <td><?php echo $admin->admin_email; ?></td>
                                                 <td>
-                                                    <a data-bs-toggle="modal" href="#update_<?php echo $admin->admin_id; ?>" class="badge btn-sm btn-primary"> Edit</a>
-                                                    <a data-bs-toggle="modal" href="#delete_<?php echo $admin->admin_id; ?>" class="badge btn-sm btn-danger"> Delete</a>
+                                                    <a data-bs-toggle="modal" href="#update_<?php echo $admin->admin_id; ?>" class="badge btn-sm btn-primary">
+                                                        Edit
+                                                    </a>
+                                                    <a data-bs-toggle="modal" href="#delete_<?php echo $admin->admin_id; ?>" class="badge btn-sm btn-danger">
+                                                        Delete
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <!-- Update Modal -->
