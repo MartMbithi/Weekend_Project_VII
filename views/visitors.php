@@ -85,7 +85,7 @@ require_once('../partials/head.php');
                                     <label class="form-label">Phone Number</label>
                                     <input type="text" required name="visitor_phone_number" class="form-control">
                                 </div>
-                                <div class="input-group input-group-outline my-3">
+                                <div class="input-group input-group-outline my-3 col-6">
                                     <label class="form-label">Check In Date & Time</label>
                                     <input type="date" required name="visitor_check_in_date_time" class="form-control">
                                 </div>

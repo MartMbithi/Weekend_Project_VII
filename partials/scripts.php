@@ -4,6 +4,7 @@
 <script src="../public/js/core/bootstrap.min.js"></script>
 <script src="../public/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="../public/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="../public/js/plugins/date_picker/js/bootstrap-datetimepicker.min.js"></script>
 <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -12,6 +13,11 @@
         }
         Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('#datetimepicker1').datetimepicker();
+    });
 </script>
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
