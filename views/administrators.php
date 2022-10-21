@@ -51,10 +51,10 @@ require_once('../partials/head.php');
                         <i class="material-icons opacity-10">person_add</i> Add Admin Details
                     </button>
                     <a href="export_pdf_admins" class="btn btn-primary">
-                        <i class="material-icons opacity-10">pdf</i> Export Admins Details To PDF
+                        <i class="material-icons opacity-10">picture_as_pdf</i> Export Admins Details To PDF
                     </a>
                     <a href="export_xls_admins" class="btn btn-primary">
-                        <i class="material-icons opacity-10">badge</i> Export Admins Details To Excel
+                        <i class="material-icons opacity-10">grid_on</i> Export Admins Details To Excel
                     </a>
                 </div>
             </div>
